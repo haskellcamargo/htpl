@@ -1,12 +1,15 @@
 <?php
 
-namespace HTPL {
+namespace HTPL
+{
   use \Exception;
 
-  class Parser {
+  class Parser
+  {
     private $ast;
 
-    public function __construct($source) {
+    public function __construct($source)
+    {
       $this->ast = simplexml_load_string($source);
       if ($this->ast === false) {
         $messages = [];
@@ -19,7 +22,8 @@ namespace HTPL {
       }
     }
 
-    public function getAst() {
+    public function getAst()
+    {
       return $this->ast;
     }
   }

@@ -1,13 +1,16 @@
 <?php
 
-namespace HTPL {
+namespace HTPL
+{
   use \Exception;
 
   require_once "Parser.php";
   require_once "Interpreter.php";
 
-  class HTPL {
-    public static function init($argc, $argv) {
+  class HTPL
+  {
+    public static function init($argc, $argv)
+    {
       if ($argc === 1) {
         echo "No mode selected", PHP_EOL;
         return;
@@ -20,7 +23,8 @@ namespace HTPL {
       }
     }
 
-    public static function parse(array &$argv) {
+    public static function parse(array &$argv)
+    {
       if (!isset($argv[2])) {
         echo "No input file", PHP_EOL;
         return;
@@ -41,6 +45,4 @@ namespace HTPL {
       }
     }
   }
-
-  HTPL::init(sizeof($argv), $argv);
 }

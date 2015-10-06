@@ -20,7 +20,7 @@ namespace HTPL {
       }
     }
 
-    public static function parse(&$argv) {
+    public static function parse(array &$argv) {
       if (!isset($argv[2])) {
         echo "No input file", PHP_EOL;
         return;

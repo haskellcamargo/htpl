@@ -1,0 +1,5 @@
+<!DOCTYPE htpl>
+<htpl>
+  <print><upper>Hello!</upper></print>
+</htpl>
+
